@@ -17,12 +17,12 @@ export default function Sidebar() {
 
       {/* Menú */}
       <nav className="flex flex-col space-y-4">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/experience">Experience</Link>
-        <Link to="/skills">Skills</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/cv/">Home</Link>
+        <Link to="/cv/about">About</Link>
+        <Link to="/cv/experience">Experience</Link>
+        <Link to="/cv/skills">Skills</Link>
+        <Link to="/cv/projects">Projects</Link>
+        <Link to="/cv/contact">Contact</Link>
       </nav>
 
       {/* Íconos sociales */}

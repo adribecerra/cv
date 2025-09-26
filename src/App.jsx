@@ -22,12 +22,12 @@ export default function App() {
         {/* Contenido principal (cambia según la ruta) */}
         <main className="ml-64 p-8 w-full">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/cv/" element={<Home />} />
+            <Route path="/cv/about" element={<About />} />
+            <Route path="/cv/experience" element={<Experience />} />
+            <Route path="/cv/skills" element={<Skills />} />
+            <Route path="/cv/projects" element={<Projects />} />
+            <Route path="/cv/contact" element={<Contact />} />
           </Routes>
         </main>
       </div>
