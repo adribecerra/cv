@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  // Maneja cierre al hacer clic en cualquier enlace
+  const handleNavClick = () => setIsOpen(false);
   return (
     <>
       {/* Botón para móviles */}
@@ -31,12 +33,12 @@ export default function Sidebar() {
 
         {/* Menú */}
         <nav className="flex flex-col space-y-4">
-          <Link to="/cv/">Home</Link>
-          <Link to="/cv/about">About</Link>
-          <Link to="/cv/experience">Experience</Link>
-          <Link to="/cv/skills">Skills</Link>
-          <Link to="/cv/projects">Projects</Link>
-          <Link to="/cv/contact">Contact</Link>
+          <Link to="/cv/" onClick={handleNavClick}>Home</Link>
+          <Link to="/cv/about" onClick={handleNavClick}>About</Link>
+          <Link to="/cv/experience" onClick={handleNavClick}>Experience</Link>
+          <Link to="/cv/skills" onClick={handleNavClick}>Skills</Link>
+          <Link to="/cv/projects" onClick={handleNavClick}>Projects</Link>
+          <Link to="/cv/contact" onClick={handleNavClick}>Contact</Link>
         </nav>
 
         {/* Íconos sociales */}
