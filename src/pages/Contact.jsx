@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section className="my-10">
+    <section className="my-10 p-8">
       <h2 className="text-2xl font-bold mb-3">Contacto</h2>
       <p>
         📧 Email: <a href="mailto:tuemail@example.com" className="text-indigo-600">tuemail@example.com</a>

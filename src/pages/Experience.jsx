@@ -15,7 +15,7 @@ export default function Experience() {
   ];
 
   return (
-    <section className="my-10">
+    <section className="my-10 p-8">
       <h2 className="text-2xl font-bold mb-3">Experiencia</h2>
       <ul className="space-y-4">
         {jobs.map((job, i) => (

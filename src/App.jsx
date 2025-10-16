@@ -20,7 +20,7 @@ export default function App() {
         <Sidebar />
 
         {/* Contenido principal (cambia según la ruta) */}
-        <main className="ml-64 p-8 w-full">
+        <main className="w-full md:ml-64 transition-all duration-300">
           <Routes>
             <Route path="/cv/" element={<Home />} />
             <Route path="/cv/about" element={<About />} />
