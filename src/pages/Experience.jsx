@@ -1,11 +1,15 @@
 import { Circle } from "lucide-react";
+import { useState } from "react";
 
 export default function Experience() {
+  const [expanded, setExpanded] = useState({});
+
   const experiences = [
     {
       company: "Silicon Development (Texas, USA)",
       role: "Senior Software Engineer",
       years: "10/2020 - Presente",
+      image: "images/experience/hc.png",  // Agrega imagen (usa placeholder si no tienes)
       description: [
         "Working on a rule engine service implemented with Drools and Java as the core.",
         "Use of AWS S3 to consume input data and store system output results.",
@@ -22,6 +26,7 @@ export default function Experience() {
       company: "Digicel Group (Jamaica)",
       role: "Senior Software Engineer",
       years: "04/2020 - 10/2020",
+      image: "images/experience/digicel.png",
       description: [
         "Working on Payments processor service.",
         "Programming languages: Java 8 EE",
@@ -29,13 +34,13 @@ export default function Experience() {
         "API Rest with Springboot",
         "Databases: Oracle and SQLServer",
         "Azure Devops",
-      
       ],
     },
     {
       company: "Navis CRM(Orlando, Florida, USA)",
       role: "Senior Software Engineer",
       years: "05/2018 - 10/2020",
+      image: "images/experience/navis.png",
       description: [
         "Working with AWS Technologies (S3, SQS,SNS,Lambda).",
         "Propose a serverless architecture.",
@@ -46,6 +51,7 @@ export default function Experience() {
       company: "Digicel Group (Jamaica)",
       role: "Senior Software Engineer",
       years: "01/2018 - 05/2018",
+      image: "images/experience/digicel.png",
       description: [
         "Programming languages: J2EE, MaterialzeCSS",
         "Database: Oracle",
@@ -59,6 +65,7 @@ export default function Experience() {
       company: "Recovery Planner (Connecticut, USA)",
       role: "Senior Software Engineer",
       years: "02/2014 - 01/2018",
+      image: "images/experience/recovery.png",
       description: [
         "Analysis and development of new requirements.",
         "Backend and Front-end improvements, adaptations and corrections.",
@@ -72,6 +79,7 @@ export default function Experience() {
       company: "Tangoe (Orange, California, USA)",
       role: "Software Engineer",
       years: "02/2014 - 01/2018",
+      image: "images/experience/tangoe.png",
       description: [
         "Programming languages: J2EE, Drools",
         "Database: MySql",
@@ -85,6 +93,7 @@ export default function Experience() {
       company: "Sitrack (Argentina)",
       role: "Software Engineer",
       years: "02/2014 - 01/2018",
+      image: "images/experience/sitrack.png",
       description: [
         "PHP development implementing PEAR, Java, Javascript.",
         "Versioning control: SVN.",
@@ -104,31 +113,100 @@ export default function Experience() {
         <h2 className="text-4xl font-bold text-center">Professional Experience</h2>
       </div>
 
-      {/* Experiencias abajo, con padding */}
+      {/* Contenido */}
       <div className="p-6">
-        {experiences.map((exp, idx) => (
-          <div
-            key={idx}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 mb-6"
-          >
-            <h2 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">
-              {exp.role}
-            </h2>
-            <h3 className="text-md text-gray-700 dark:text-gray-300">
-              {exp.company}
-            </h3>
-            <p className="text-sm text-gray-500 mb-4">{exp.years}</p>
+        {/* Móvil: cards apiladas */}
+        <div className="md:hidden">
+          {experiences.map((exp, idx) => {
+            const isExpanded = expanded[idx] || false;
+            return (
+              <div key={idx} className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 mb-6">
+                {/* Icono y compañía */}
+                <div className="flex items-center mb-4">
+                  <img src={exp.image} alt={exp.company} className="w-12 h-12 rounded-full mr-4 border-2 border-indigo-500" onError={(e) => e.target.src = "/images/placeholder.png"} />
+                  <h3 className="text-md text-gray-700 dark:text-gray-300 leading-none">{exp.company}</h3>
+                </div>
 
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-              {exp.description.map((item, index) => (
-                <li key={index} className="flex items-start gap-2">
-                  <Circle size={8} className="mt-2 text-indigo-500 shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+                <h2 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">{exp.role}</h2>
+                <p className="text-sm text-gray-500 mb-4">{exp.years}</p>
+
+                {/* Botón Ver más */}
+                {exp.description.length > 0 && (
+                  <button
+                    onClick={() => setExpanded(prev => ({ ...prev, [idx]: !prev[idx] }))}
+                    className="text-indigo-600 dark:text-indigo-400 hover:underline text-sm mb-4"
+                  >
+                    {isExpanded ? "Ver menos" : "Ver más"}
+                  </button>
+                )}
+
+                {/* Descripción colapsable */}
+                {isExpanded && (
+                  <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                    {exp.description.map((item, index) => (
+                      <li key={index} className="flex items-start gap-2">
+                        <Circle size={8} className="mt-2 text-indigo-500 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Desktop: timeline */}
+        <div className="hidden md:block relative max-w-4xl mx-auto">
+          {/* Línea vertical */}
+          <div className="absolute left-8 top-0 bottom-0 w-1 bg-indigo-500"></div>
+
+          {experiences.map((exp, idx) => {
+            const isExpanded = expanded[idx] || false;
+            return (
+              <div key={idx} className="relative flex items-start mb-8">
+                {/* Punto */}
+                <div className="w-16 h-16 bg-indigo-500 rounded-full absolute left-0 z-10 flex items-center justify-center text-white text-xs font-bold whitespace-pre-line">
+                  <span>{exp.years.replace(' - ', '\n')}</span>
+                </div>
+
+                {/* Card */}
+                <div className="ml-20 bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 w-full">
+                  {/* Icono y compañía */}
+                  <div className="flex items-center mb-4">
+                    <img src={exp.image} alt={exp.company} className="w-12 h-12 rounded-full mr-4 border-2 border-indigo-500" onError={(e) => e.target.src = "/images/placeholder.png"} />
+                    <h3 className="text-md text-gray-700 dark:text-gray-300 leading-none">{exp.company}</h3>
+                  </div>
+
+                  <h2 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">{exp.role}</h2>
+                  <p className="text-sm text-gray-500 mb-4">{exp.years}</p>
+
+                  {/* Botón Ver más */}
+                  {exp.description.length > 0 && (
+                    <button
+                      onClick={() => setExpanded(prev => ({ ...prev, [idx]: !prev[idx] }))}
+                      className="text-indigo-600 dark:text-indigo-400 hover:underline text-sm mb-4"
+                    >
+                      {isExpanded ? "Ver menos" : "Ver más"}
+                    </button>
+                  )}
+
+                  {/* Descripción colapsable */}
+                  {isExpanded && (
+                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                      {exp.description.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <Circle size={8} className="mt-2 text-indigo-500 shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
