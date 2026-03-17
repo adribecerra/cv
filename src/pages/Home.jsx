@@ -2,23 +2,51 @@ import PageLayout from "../components/PageLayout";
 
 export default function Home() {
   return (
-    <PageLayout bg-gray-50 dark:bg-gray-900 transition-colors duration-300>
-        <h1 className="text-3xl font-bold mb-4">Hola! Soy Adrian,</h1>
-        <p className="text-lg">
-          Durante más de 15 años he trabajando como desarrollador backend, si bien he desarrollado aplicaciones en front-end (como este cv de presentación 😁) mi fuerte siempre ha sido el backend-
-          Apasionado de la tecnología y crear soluciones escalables y a medida. Siempre buscando estar al día en tecnologías de vanguardia.
-        </p>
-    </PageLayout>
-  );
-/*
-    <section className="my-10">
-      <h2 className="text-2xl font-bold mb-3">Hola! Soy Adrian</h2>
-     
-        <p className="mb-4">
-          Durante más de 15 años he trabajando como desarrollador backend, si bien he desarrollado aplicaciones en front-end (como este cv de presentación 😁) mi fuerte siempre ha sido el backend-
-          Apasionado de la tecnología y crear soluciones escalables y a medida. Siempre buscando estar al día en tecnologías de vanguardia.
-        </p>
-      
+    <section className="bg-gray-50 dark:bg-gray-400 transition-colors duration-300">
+      {/* Título centrado en pantalla completa */}
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          {/* Foto solo visible en móviles */}
+          <div className="block md:hidden mb-6">
+            <img
+              src="images/fotocv.PNG"
+              alt="Tu foto"
+              className="w-28 h-28 rounded-full border-4 border-white shadow-md mx-auto"
+            />
+          </div>
+          <h1 className="text-4xl font-bold mb-4">Hola! Soy Adrian,</h1>
+          <p className="text-lg max-w-2xl mx-auto">
+            Con más de 15 años de experiencia en el desarrollo de software. Soy una persona orientada a la resolución de problemas, con experiencia trabajando en distintos proyectos y variedad de técnologías.
+          </p>
+        </div>
+      </div>
+
+      {/* Cards abajo, con padding */}
+      <div className="p-8">
+        <div className="grid gap-6 lg:grid-cols-2">
+          {/* Card 1: Enfoque y experiencia */}
+          <article className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+            <h3 className="text-lg font-semibold mb-3 text-indigo-700 dark:text-indigo-300">Mi enfoque</h3>
+            <p className="mb-4 text-gray-700 dark:text-gray-300">
+              Me gusta involucrarme en los desafíos, entender el problema de fondo y encontrar soluciones prácticas.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300">
+              Estoy orientado a resultados y cuento con experiencia participando en proyectos tecnológicos de alto impacto, donde me enfoco en comprender las necesidades del negocio y transformarlas en soluciones concretas, priorizando la eficiencia, la calidad y la mejora continua.
+            </p>
+          </article>
+
+          {/* Card 2: Valores y colaboración */}
+          <article className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+            <h3 className="text-lg font-semibold mb-3 text-indigo-700 dark:text-indigo-300">Mis valores</h3>
+            <ul className="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300">
+              <li>Adaptación a entornos dinámicos</li>
+              <li>Trabajo en equipo y comunicación clara</li>
+              <li>Colaboración con equipos multidisciplinarios</li>
+              <li>Contribución a la evolución de procesos</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
-  );*/
+  );
 }

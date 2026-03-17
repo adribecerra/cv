@@ -98,34 +98,38 @@ export default function Experience() {
   ];
 
   return (
-    <section className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors duration-300">
-      <h1 className="my-10 md:ml-4 ml-14 text-2xl font-bold text-indigo-700 dark:text-indigo-300 mb-8">
-        Professional Experience
-      </h1>
+    <section className="bg-gray-50 dark:bg-gray-400 transition-colors duration-300">
+      {/* Título centrado en pantalla completa */}
+      <div className="min-h-screen flex items-center justify-center">
+        <h2 className="text-4xl font-bold text-center">Professional Experience</h2>
+      </div>
 
-      {experiences.map((exp, idx) => (
-        <div
-          key={idx}
-          className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 mb-6"
-        >
-          <h2 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">
-            {exp.role}
-          </h2>
-          <h3 className="text-md text-gray-700 dark:text-gray-300">
-            {exp.company}
-          </h3>
-          <p className="text-sm text-gray-500 mb-4">{exp.years}</p>
+      {/* Experiencias abajo, con padding */}
+      <div className="p-6">
+        {experiences.map((exp, idx) => (
+          <div
+            key={idx}
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 mb-6"
+          >
+            <h2 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">
+              {exp.role}
+            </h2>
+            <h3 className="text-md text-gray-700 dark:text-gray-300">
+              {exp.company}
+            </h3>
+            <p className="text-sm text-gray-500 mb-4">{exp.years}</p>
 
-          <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-            {exp.description.map((item, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <Circle size={8} className="mt-2 text-indigo-500 shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+              {exp.description.map((item, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <Circle size={8} className="mt-2 text-indigo-500 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

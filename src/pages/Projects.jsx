@@ -5,7 +5,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="my-10 p-8">
+    <section className="p-8 bg-gray-50 dark:bg-gray-400 min-h-screen transition-colors duration-300">
       <h2 className="text-2xl font-bold mb-3">Proyectos</h2>
       <ul className="list-disc pl-6">
         {projects.map((p, i) => (
