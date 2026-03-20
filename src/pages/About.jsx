@@ -2,7 +2,7 @@ import PageLayout from "../components/PageLayout";
 
 export default function About() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-400 transition-colors duration-300">
+    <PageLayout>
       {/* Título centrado en pantalla completa */}
       <div className="min-h-screen flex items-center justify-center">
         <h2 className="text-4xl font-bold text-center">About me</h2>
@@ -53,6 +53,6 @@ export default function About() {
           </article>
         </div>
       </div>
-    </section>
+    </PageLayout>
   );
 }

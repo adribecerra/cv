@@ -1,6 +1,8 @@
+import PageLayout from "../components/PageLayout";
+
 export default function Contact() {
   return (
-    <section className="p-8 bg-gray-50 dark:bg-gray-400 min-h-screen transition-colors duration-300">
+    <PageLayout>
       <h2 className="text-2xl font-bold mb-3">Contacto</h2>
       <p>
         📧 Email: <a href="mailto:adriansnm03@gmail.com" className="text-indigo-600">adriansnm03@gmail.com</a>
@@ -11,6 +13,6 @@ export default function Contact() {
       <p>
         💻 GitHub: <a href="https://github.com/adribecerra" className="text-indigo-600">github.com/adribecerra</a>
       </p>
-    </section>
+    </PageLayout>
   );
 }

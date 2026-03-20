@@ -2,7 +2,7 @@ import PageLayout from "../components/PageLayout";
 
 export default function Home() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-400 transition-colors duration-300">
+    <PageLayout>
       {/* Título centrado en pantalla completa */}
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -11,7 +11,7 @@ export default function Home() {
             <img
               src="images/fotocv.PNG"
               alt="Tu foto"
-              className="w-28 h-28 rounded-full border-4 border-white shadow-md mx-auto"
+              className="w-40 h-40 rounded-full shadow-md mx-auto"
             />
           </div>
           <h1 className="text-4xl font-bold mb-4">Hola! Soy Adrian,</h1>
@@ -47,6 +47,6 @@ export default function Home() {
           </article>
         </div>
       </div>
-    </section>
+    </PageLayout>
   );
 }

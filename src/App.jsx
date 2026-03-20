@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
+import Languages from "./pages/Languages";
 import Contact from "./pages/Contact";
 import Sidebar from "./components/Sidebar";
 import DarkModeToggle from "./components/DarkModeToggle";
@@ -26,7 +26,7 @@ export default function App() {
             <Route path="/cv/about" element={<About />} />
             <Route path="/cv/experience" element={<Experience />} />
             <Route path="/cv/skills" element={<Skills />} />
-            <Route path="/cv/projects" element={<Projects />} />
+            <Route path="/cv/languages" element={<Languages />} />
             <Route path="/cv/contact" element={<Contact />} />
           </Routes>
         </main>

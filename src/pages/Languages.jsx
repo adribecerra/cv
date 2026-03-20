@@ -1,12 +1,14 @@
-export default function Projects() {
+import PageLayout from "../components/PageLayout";
+
+export default function Languagues() {
   const projects = [
-    { name: "Portfolio Web", link: "https://github.com/tuusuario/portfolio" },
-    { name: "API Rest con Spring", link: "https://github.com/tuusuario/api-rest" }
+    { name: "Spanish", level: "Native or bilingual proficency" },
+    { name: "English", level: "Full professional proficiency" }
   ];
 
   return (
-    <section className="p-8 bg-gray-50 dark:bg-gray-400 min-h-screen transition-colors duration-300">
-      <h2 className="text-2xl font-bold mb-3">Proyectos</h2>
+    <PageLayout>
+      <h2 className="text-2xl font-bold mb-3">Languagues</h2>
       <ul className="list-disc pl-6">
         {projects.map((p, i) => (
           <li key={i}>
@@ -21,6 +23,6 @@ export default function Projects() {
           </li>
         ))}
       </ul>
-    </section>
+    </PageLayout>
   );
 }

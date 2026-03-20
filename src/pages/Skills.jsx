@@ -1,3 +1,5 @@
+import PageLayout from "../components/PageLayout";
+
 const skills = [
   {
     name: "Java",
@@ -39,7 +41,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="bg-gray-50 dark:bg-gray-400 transition-colors duration-300">
+    <PageLayout>
       {/* Título centrado en pantalla completa */}
       <div className="min-h-screen flex items-center justify-center">
         <h2 className="text-4xl font-bold text-center">Skills</h2>
@@ -69,6 +71,6 @@ export default function Skills() {
           ))}
         </div>
       </div>
-    </section>
+    </PageLayout>
   );
 }
