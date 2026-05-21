@@ -1,58 +1,56 @@
 import PageLayout from "../components/PageLayout";
+import ImageCard from "../components/ImageCard";
 
 export default function About() {
-  return (
-    <PageLayout>
-      {/* Título centrado en pantalla completa */}
-      <div className="min-h-screen flex items-center justify-center">
-        <h2 className="text-4xl font-bold text-center">About me</h2>
-      </div>
-
-      {/* Cards abajo, con padding */}
-      <div className="p-8">
-        <div className="grid gap-6 lg:grid-cols-2">
-          {/* Card 1: Resumen */}
-          <article className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
-            <p className="mb-4 text-gray-700 dark:text-gray-300"> 
-              Soy un desarrollador con experiencia en backend y frontend, apasionado
-              por crear soluciones escalables e intuitivas.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300"> 
-              Aplico mis habilidades y conocimientos obtenidos durante mi carrera
-              universitaria y la experiencia laboral, trabajando con nuevas ideas
-              para contribuir a los objetivos de la empresa y seguir creciendo
-              profesionalmente.
-            </p>
-          </article>
-
-          {/* Card 2: Destacados / habilidades */}
-          <article className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6"> 
-            <h4 className="text-lg font-semibold mb-3 text-indigo-700 dark:text-indigo-300">Lo que aporto</h4>
-            <ul className="list-disc list-inside space-y-2 text-sm text-gray-700 dark:text-gray-300">
-              <li>Desarrollo backend escalable</li>
-              <li>Interfaces limpias y usables</li>
-              <li>Trabajo colaborativo y comunicación</li>
-              <li>Resolución de problemas complejos</li>
-            </ul>
-          </article>
-
-          {/* Card 3: Valores / “chips” */}
-          <article className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6"> 
-            <h4 className="text-lg font-semibold mb-3 text-indigo-700 dark:text-indigo-300">Mis valores</h4>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-100 text-sm">
-                Apasionado por la tecnología
-              </span>
-              <span className="px-3 py-1 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-100 text-sm">
-                Trabajo en equipo
-              </span>
-              <span className="px-3 py-1 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-100 text-sm">
-                Resolución de problemas
-              </span>
+    return (
+        <PageLayout>
+            {/* Título centrado en pantalla completa */}
+            <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                    <h2 className="text-4xl font-bold text-center">About me</h2>
+                    <p className="text-lg max-w-2xl mx-auto">
+                        I am a Software Engineer who graduated from Aconcagua University in 2011. Outside of work, I enjoy outdoor activities, sports, trekking, and cycling. I also love good food, discovering different cultures, and, most of all, traveling.
+                    </p>
+                </div>
             </div>
-          </article>
-        </div>
-      </div>
-    </PageLayout>
-  );
+            <div className="text-center">
+                <h1 className="text-4xl font-bold mb-4">Hobbies and Interests</h1>
+            </div>
+            {/* Cards con foto abajo*/}
+            <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <ImageCard
+                    imageSrc="images/aboutme/cycling.png"
+                    title="Cycling"
+                    description="I enjoy cycling as a way to stay fit and explore new places."
+                />
+                <ImageCard
+                    imageSrc="images/aboutme/trekking.png"
+                    title="Trekking"
+                    description="I enjoy trekking as a way to connect with nature and challenge myself physically."
+                />
+                <ImageCard
+                    imageSrc="images/aboutme/sports.png"
+                    title="Sports"
+                    description="I enjoy various sports as a way to stay active and healthy."
+                />
+                <ImageCard
+                    imageSrc="images/aboutme/travel.png"
+                    title="Travel"
+                    description="I love traveling and discovering new cultures and experiences."
+                />
+                <ImageCard
+                    imageSrc="images/aboutme/food.png"
+                    title="Food"
+                    description="I’m passionate about good food, I enjoy exploring different cuisines and cooking new recipes."
+                />
+                <ImageCard
+                    imageSrc="images/aboutme/asador.png"
+                    title="Food"
+                    description="I also enjoy cooking and making traditional Argentine asados."
+                />
+            </div>
+
+
+        </PageLayout>
+    );
 }

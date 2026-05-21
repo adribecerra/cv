@@ -1,28 +1,15 @@
 import PageLayout from "../components/PageLayout";
+import Card from "../components/Card";
 
 export default function Languagues() {
-  const projects = [
-    { name: "Spanish", level: "Native or bilingual proficency" },
-    { name: "English", level: "Full professional proficiency" }
+  const languages = [
+    { name: "Spanish", description: "Native or bilingual proficency", image: "images/languages/spanish.png" },
+    { name: "English", description: "Full professional proficiency", image: "images/languages/english.png" }
   ];
 
   return (
     <PageLayout>
-      <h2 className="text-2xl font-bold mb-3">Languagues</h2>
-      <ul className="list-disc pl-6">
-        {projects.map((p, i) => (
-          <li key={i}>
-            <a
-              href={p.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-600 hover:underline"
-            >
-              {p.name}
-            </a>
-          </li>
-        ))}
-      </ul>
+        <Card items={languages} />       
     </PageLayout>
   );
 }

@@ -5,37 +5,37 @@ const skills = [
     name: "Java",
     image: "images/skills/java.png",
     description:
-      "Construcción de APIs y microservicios escalables con Spring Boot.",
+      "Building scalable APIs and micro services with Java",
   },
   {
-    name: "Spring Boot",
+    name: "Spring Framework",
     image: "images/skills/spring.png",
     description:
-      "Arquitectura REST, seguridad, y despliegue en entornos productivos.",
+      "REST APIs Architectures, Spring Security, Spring Data JPA",
   },
   {
     name: "RabbitMQ",
     image: "images/skills/RabbitMQ.png",
     description:
-      "Sistemas event-driven y procesamiento asíncrono con colas de mensajes.",
+      "Designing, building, and maintaining event-driven systems with asynchronous processing using message queues.",
   },
   {
     name: "Testing",
     image: "images/skills/testing.png",
     description:
-      "Desarrollo de pruebas unitarias y de integración para garantizar la calidad del software.",
+      "Unit testing with JUnit and Mockito, integration testing with MockS3, and end-to-end testing strategies to ensure software quality and reliability."
   },
   {
     name: "AWS",
     image: "images/skills/aws.png",
     description:
-      "Servicios en la nube (EC2, RDS, S3, Lambda) para soluciones resilientes.",
+      "Utilizing AWS services like S3, AWSGlue, Athena db and Lambda for building scalable and serverless applications.",
   },
   {
     name: "Docker",
     image: "images/skills/docker.png",
     description:
-      "Contenerización de aplicaciones para despliegues consistentes.",
+      "Containerization of applications for consistent deployments.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Skills() {
               <img
                 src={skill.image}
                 alt={skill.name}
-                className="w-full h-40 object-contain bg-white p-6"
+                className="w-full h-35 object-contain bg-white p-6"
                 loading="lazy"
               />
               <div className="p-5">

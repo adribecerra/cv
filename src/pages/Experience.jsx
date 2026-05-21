@@ -9,7 +9,7 @@ export default function Experience() {
     {
       company: "Silicon Development (Texas, USA)",
       role: "Senior Software Engineer",
-      years: "10/2020 - Presente",
+      years: "10/2020 - Present",
       image: "images/experience/hc.png",  // Agrega imagen (usa placeholder si no tienes)
       description: [
         "Working on a rule engine service implemented with Drools and Java as the core.",
@@ -45,7 +45,7 @@ export default function Experience() {
       description: [
         "Working with AWS Technologies (S3, SQS,SNS,Lambda).",
         "Propose a serverless architecture.",
-        "Creating an ETL using AWS Glue."
+        "ETL implementation using AWS Glue."
       ],
     },
     {
@@ -121,37 +121,39 @@ export default function Experience() {
           {experiences.map((exp, idx) => {
             const isExpanded = expanded[idx] || false;
             return (
-              <div key={idx} className="bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 mb-6">
+              <div key={idx} className="overflow-hidden rounded-2xl shadow-md mb-6">
                 {/* Icono y compañía */}
-                <div className="flex items-center mb-4">
+                <div className="flex bg-white dark:bg-gray-600 items-center p-4">
                   <img src={exp.image} alt={exp.company} className="w-12 h-12 rounded-full mr-4 border-2 border-indigo-500" onError={(e) => e.target.src = "/images/placeholder.png"} />
                   <h3 className="text-md text-gray-700 dark:text-gray-300 leading-none">{exp.company}</h3>
                 </div>
+                
+                <div className="items-center bg-gray-200 dark:bg-gray-800 p-6">
+                  <h2 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">{exp.role}</h2>
+                  <p className="text-sm text-gray-500 mb-4">{exp.years}</p>
 
-                <h2 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">{exp.role}</h2>
-                <p className="text-sm text-gray-500 mb-4">{exp.years}</p>
+                  {/* Botón Ver más */}
+                  {exp.description.length > 0 && (
+                    <button
+                      onClick={() => setExpanded(prev => ({ ...prev, [idx]: !prev[idx] }))}
+                      className="text-indigo-600 dark:text-indigo-400 hover:underline text-sm mb-4"
+                    >
+                      {isExpanded ? "Ver menos" : "Ver más"}
+                    </button>
+                  )}
 
-                {/* Botón Ver más */}
-                {exp.description.length > 0 && (
-                  <button
-                    onClick={() => setExpanded(prev => ({ ...prev, [idx]: !prev[idx] }))}
-                    className="text-indigo-600 dark:text-indigo-400 hover:underline text-sm mb-4"
-                  >
-                    {isExpanded ? "Ver menos" : "Ver más"}
-                  </button>
-                )}
-
-                {/* Descripción colapsable */}
-                {isExpanded && (
-                  <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                    {exp.description.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <Circle size={8} className="mt-2 text-indigo-500 shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  {/* Descripción colapsable */}
+                  {isExpanded && (
+                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                      {exp.description.map((item, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <Circle size={8} className="mt-2 text-indigo-500 shrink-0" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             );
           })}
@@ -180,7 +182,7 @@ export default function Experience() {
                       <h3 className="text-md text-gray-700 dark:text-gray-300 leading-none">{exp.company}</h3>
                     </div>
                   </div>
-                  <div className="dark:bg-gray-800 p-6 w-full">
+                  <div className="bg-gray-300 dark:bg-gray-800 p-6 w-full">
                     <h2 className="text-lg font-semibold text-indigo-700 dark:text-indigo-300">{exp.role}</h2>
                     <p className="text-sm text-gray-500 mb-4">{exp.years}</p>
 

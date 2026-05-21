@@ -57,7 +57,7 @@ export default function Sidebar() {
         <Linkedin size={28} />
       </a>
       <a
-        href="files/CV-Adrian-Becerra.pdf"
+        href="files/AdrianBecerraCV.pdf"
         download
         className="hover:text-indigo-300 transition-colors"
       >
