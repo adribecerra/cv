@@ -110,10 +110,10 @@ export default function Experience() {
     return (
         <PageLayout>
             {/* Título centrado en pantalla completa */}
+            {/*
             <div className="min-h-screen flex items-center justify-center">
                 <h2 className="text-4xl font-bold text-center">Professional Experience</h2>
-            </div>
-
+            </div>*/}
             {/* Contenido */}
             <div className="p-1">
                 {/* Móvil: cards */}
@@ -121,7 +121,7 @@ export default function Experience() {
                     {experiences.map((exp, idx) => {
                         const isExpanded = expanded[idx] || false;
                         return (
-                            <div key={idx} className="overflow-hidden rounded-2xl shadow-md mb-6 w-full">
+                            <div key={idx} className="divide-y divide-gray-200 overflow-hidden rounded-2xl shadow-md mb-6 w-full">
                                 {/* Icono y compañía */}
                                 <div className="flex bg-white dark:bg-gray-600 items-center p-4">
                                     <img src={exp.image} alt={exp.company} className="w-12 h-12 rounded-full mr-4 border-2 border-indigo-500" onError={(e) => e.target.src = "/images/placeholder.png"} />
@@ -173,7 +173,7 @@ export default function Experience() {
                                     <span>{exp.years.replace(' - ', '\n')}</span>
                                 </div>
 
-                                <div className="ml-20 dark:bg-gray-600 rounded-2xl shadow-md overflow-hidden w-full">
+                                <div className="divide-y divide-gray-200 ml-20 dark:bg-gray-600 rounded-2xl shadow-md overflow-hidden w-full">
                                     {/* Card */}
                                     <div className="bg-white dark:bg-gray-600 p-6">
                                         {/* Icono y compañía */}

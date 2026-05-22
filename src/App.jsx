@@ -1,9 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 
 import Experience from "./pages/Experience";
 import Skills from "./pages/Skills";
 import Languages from "./pages/Languages";
 import Education from "./pages/Education";
+import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
 import Sidebar from "./components/Sidebar";
 import DarkModeToggle from "./components/DarkModeToggle";
@@ -12,7 +14,7 @@ import About from "./pages/About";
 
 export default function App() {
     return (
-        <Router basename={import.meta.env.BASE_URL}>
+        <HashRouter>
             <div className="flex">
                 {/* Botón flotante Dark Mode */}
                 <DarkModeToggle />
@@ -30,11 +32,12 @@ export default function App() {
                         <Route path="/skills" element={<Skills />} />
                         <Route path="/languages" element={<Languages />} />
                         <Route path="/education" element={<Education />} />
-                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/courses" element={<Courses />} />
+                        {/*<Route path="/contact" element={<Contact />} />*/}
                     </Routes>
                 </main>
 
             </div>
-        </Router>
+        </HashRouter>
     );
 }

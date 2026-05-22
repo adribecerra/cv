@@ -1,5 +1,5 @@
 import PageLayout from "../components/PageLayout";
-import Card from "../components/Card";
+import IconCard from "../components/IconCard";
 
 export default function Languagues() {
   const languages = [
@@ -9,7 +9,7 @@ export default function Languagues() {
 
   return (
     <PageLayout>
-        <Card items={languages} />       
+        <IconCard items={languages} />       
     </PageLayout>
   );
 }

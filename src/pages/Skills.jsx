@@ -43,9 +43,9 @@ export default function Skills() {
   return (
     <PageLayout>
       {/* Título centrado en pantalla completa */}
-      <div className="min-h-screen flex items-center justify-center">
+      {/*<div className="min-h-screen flex items-center justify-center">
         <h2 className="text-4xl font-bold text-center">Skills</h2>
-      </div>
+      </div>*/}
 
       {/* Cards abajo, con padding */}
       <div className="p-8">

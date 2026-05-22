@@ -34,14 +34,15 @@ export default function Sidebar() {
     <p className="text-sm text-indigo-200 mb-8">Fullstack Developer</p>
 
     {/* Menú */}
-    <nav className="flex flex-col space-y-4  mb-2 mt-16">
+    <nav className="flex flex-col space-y-4  mb-2 mt-16 md:mt-0">
       <Link to="/" onClick={handleNavClick}>Home</Link>
       <Link to="/about" onClick={handleNavClick}>About me</Link>
       <Link to="/experience" onClick={handleNavClick}>Experience</Link>
       <Link to="/skills" onClick={handleNavClick}>Skills</Link>
       <Link to="/languages" onClick={handleNavClick}>Languages</Link>
       <Link to="/education" onClick={handleNavClick}>Education   </Link>
-      <Link to="/contact" onClick={handleNavClick}>Contact</Link>
+      <Link to="/courses" onClick={handleNavClick}>Courses   </Link>
+      {/*<Link to="/contact" onClick={handleNavClick}>Contact</Link>*/}
     </nav>
   </div>
 
