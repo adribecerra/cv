@@ -35,13 +35,13 @@ export default function Sidebar() {
 
     {/* Menú */}
     <nav className="flex flex-col space-y-4  mb-2 mt-16 md:mt-0">
-      <Link to="/" onClick={handleNavClick}>Home</Link>
-      <Link to="/about" onClick={handleNavClick}>About me</Link>
-      <Link to="/experience" onClick={handleNavClick}>Experience</Link>
-      <Link to="/skills" onClick={handleNavClick}>Skills</Link>
-      <Link to="/languages" onClick={handleNavClick}>Languages</Link>
-      <Link to="/education" onClick={handleNavClick}>Education   </Link>
-      <Link to="/courses" onClick={handleNavClick}>Courses   </Link>
+      <Link className="hover:text-indigo-300 transition-colors" to="/" onClick={handleNavClick}>Home</Link>
+      <Link className="hover:text-indigo-300 transition-colors" to="/about" onClick={handleNavClick}>About me</Link>
+      <Link className="hover:text-indigo-300 transition-colors" to="/experience" onClick={handleNavClick}>Experience</Link>
+      <Link className="hover:text-indigo-300 transition-colors" to="/skills" onClick={handleNavClick}>Skills</Link>
+      <Link className="hover:text-indigo-300 transition-colors" to="/languages" onClick={handleNavClick}>Languages</Link>
+      <Link className="hover:text-indigo-300 transition-colors" to="/education" onClick={handleNavClick}>Education   </Link>
+      <Link className="hover:text-indigo-300 transition-colors" to="/courses" onClick={handleNavClick}>Courses   </Link>
       {/*<Link to="/contact" onClick={handleNavClick}>Contact</Link>*/}
     </nav>
   </div>
