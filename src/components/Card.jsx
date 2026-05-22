@@ -19,7 +19,7 @@ export default function Card({ items = [] }) {
                                     className="w-12 h-12 rounded-full mr-4"
                                     onError={(e) => (e.target.src = "/images/placeholder.png")}
                                 />
-                                <h3 style={{ position: "relative", top: "-10px" }} className="text-md text-gray-700 dark:text-gray-300 leading-none">
+                                <h3 className="-mt-0 text-md text-gray-700 dark:text-gray-300 leading-none">
                                     {exp?.name}
                                 </h3>
 

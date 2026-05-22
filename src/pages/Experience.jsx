@@ -115,7 +115,7 @@ export default function Experience() {
             </div>
 
             {/* Contenido */}
-            <div className="p-6">
+            <div className="p-1">
                 {/* Móvil: cards */}
                 <div className="md:hidden">
                     {experiences.map((exp, idx) => {
@@ -125,7 +125,7 @@ export default function Experience() {
                                 {/* Icono y compañía */}
                                 <div className="flex bg-white dark:bg-gray-600 items-center p-4">
                                     <img src={exp.image} alt={exp.company} className="w-12 h-12 rounded-full mr-4 border-2 border-indigo-500" onError={(e) => e.target.src = "/images/placeholder.png"} />
-                                    <h3 style={{ position: 'relative', top: '-10px' }} className="text-md text-gray-700 dark:text-gray-300 leading-none">{exp.company}</h3>
+                                    <h3 className="-mt-0 text-md text-gray-700 dark:text-gray-300 leading-none">{exp.company}</h3>
                                 </div>
 
                                 <div className="items-center bg-gray-200 dark:bg-gray-800 p-6">

@@ -30,31 +30,31 @@ export default function Home() {
                     imageSrc="images/experience/work_experience.jpeg"
                     title="My work experience"
                     description="The strongest professionals are those who combine experience with a constant desire to learn."
-                    route="/cv/experience"
+                    route="/experience"
                 /> 
                 <ImageCard
                     imageSrc="images/education/education.png"
                     title="My education"
                     description="If you want to change the world, first dedicate yourself to education."
-                    route="/cv/education"
+                    route="/education"
                 />
                 <ImageCard
                     imageSrc="images/skills/skills.png"
                     title="My skills"
                     description="Our greatest asset is the willingness to keep improving our skills every day."
-                    route="/cv/skills"
+                    route="/skills"
                 />
                 <ImageCard
                     imageSrc="images/languages/languages.png"
                     title="My languages"
                     description="Clear communication is the foundation of great solutions."
-                    route="/cv/languages"
+                    route="/languages"
                 />
                 <ImageCard
                     imageSrc="images/courses/courses.png"
                     title="My Courses"
                     description="Every course you take is another step toward a better version of yourself."
-                    route="/cv/courses"
+                    route="/courses"
                 />
                 {/* My resume card */}
                 <div>

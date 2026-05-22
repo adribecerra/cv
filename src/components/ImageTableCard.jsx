@@ -18,7 +18,7 @@ export default function ImageTableCard({ items = [] }) {
                                     className="w-30 h-30 rounded-full mr-4"
                                     onError={(e) => (e.target.src = "/images/education/placeholder.png")}
                                 />
-                                <h3 style={{ position: "relative", top: "-10px" }} className="text-md text-gray-700 dark:text-gray-300 leading-none">
+                                <h3 className="-mt-0 text-md text-gray-700 dark:text-gray-300 leading-none">
                                     {exp?.name}
                                 </h3>
                             </div>
@@ -28,7 +28,7 @@ export default function ImageTableCard({ items = [] }) {
                                     {exp?.description}
                                 </h2>
                             </div>
-                            <div className="bg-gray-200 dark:bg-gray-800 p-4 w-full">
+                            <div className="bg-gray-200 dark:bg-gray-600 p-4 w-full">
                                 <h2 className="text-lg font-semibold text-gray-400 dark:text-indigo-300">
                                     {exp?.rangeTime}
                                 </h2>

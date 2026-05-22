@@ -11,3 +11,9 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+<script>
+  // Enforce trailing slash on the base subdirectory path
+  if (window.location.pathname === '/cv') {
+    window.location.replace('/cv/');
+  }
+</script>

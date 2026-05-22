@@ -35,13 +35,13 @@ export default function Sidebar() {
 
     {/* Menú */}
     <nav className="flex flex-col space-y-4  mb-2 mt-16">
-      <Link to="/cv/" onClick={handleNavClick}>Home</Link>
-      <Link to="/cv/about" onClick={handleNavClick}>About me</Link>
-      <Link to="/cv/experience" onClick={handleNavClick}>Experience</Link>
-      <Link to="/cv/skills" onClick={handleNavClick}>Skills</Link>
-      <Link to="/cv/languages" onClick={handleNavClick}>Languages</Link>
-      <Link to="/cv/education" onClick={handleNavClick}>Education   </Link>
-      <Link to="/cv/contact" onClick={handleNavClick}>Contact</Link>
+      <Link to="/" onClick={handleNavClick}>Home</Link>
+      <Link to="/about" onClick={handleNavClick}>About me</Link>
+      <Link to="/experience" onClick={handleNavClick}>Experience</Link>
+      <Link to="/skills" onClick={handleNavClick}>Skills</Link>
+      <Link to="/languages" onClick={handleNavClick}>Languages</Link>
+      <Link to="/education" onClick={handleNavClick}>Education   </Link>
+      <Link to="/contact" onClick={handleNavClick}>Contact</Link>
     </nav>
   </div>
 

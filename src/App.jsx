@@ -11,28 +11,30 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 
 export default function App() {
-  return (
-    <Router>
-      <div className="flex">
-      {/* Botón flotante Dark Mode */}
-      <DarkModeToggle />
+    return (
+        <Router basename={import.meta.env.BASE_URL}>
+            <div className="flex">
+                {/* Botón flotante Dark Mode */}
+                <DarkModeToggle />
 
-        {/* Sidebar fijo */}
-        <Sidebar />
+                {/* Sidebar fijo */}
+                <Sidebar />
 
-        {/* Contenido principal (cambia según la ruta) */}
-        <main className="w-full md:ml-64 transition-all duration-300">
-          <Routes>
-            <Route path="/cv/" element={<Home />} />
-            <Route path="/cv/about" element={<About />} />
-            <Route path="/cv/experience" element={<Experience />} />
-            <Route path="/cv/skills" element={<Skills />} />
-            <Route path="/cv/languages" element={<Languages />} />
-            <Route path="/cv/education" element={<Education />} />
-            <Route path="/cv/contact" element={<Contact />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
-  );
+                {/* Contenido principal (cambia según la ruta) */}
+
+                <main className="w-full md:ml-64 transition-all duration-300">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/experience" element={<Experience />} />
+                        <Route path="/skills" element={<Skills />} />
+                        <Route path="/languages" element={<Languages />} />
+                        <Route path="/education" element={<Education />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                </main>
+
+            </div>
+        </Router>
+    );
 }
