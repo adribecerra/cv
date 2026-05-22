@@ -40,6 +40,7 @@ export default function Sidebar() {
       <Link to="/cv/experience" onClick={handleNavClick}>Experience</Link>
       <Link to="/cv/skills" onClick={handleNavClick}>Skills</Link>
       <Link to="/cv/languages" onClick={handleNavClick}>Languages</Link>
+      <Link to="/cv/education" onClick={handleNavClick}>Education   </Link>
       <Link to="/cv/contact" onClick={handleNavClick}>Contact</Link>
     </nav>
   </div>
