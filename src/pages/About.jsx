@@ -26,12 +26,12 @@ export default function About() {
                 <ImageCard
                     imageSrc="images/aboutme/trekking.png"
                     title="Trekking"
-                    description="I enjoy trekking as a way to connect with nature and challenge myself physically."
+                    description="I really like trekking, which combines nature, adventure, and physical challenge."
                 />
                 <ImageCard
                     imageSrc="images/aboutme/sports.png"
                     title="Sports"
-                    description="I enjoy various sports as a way to stay active and healthy."
+                    description="I’m passionate about various sports as a way to stay active and healthy."
                 />
                 <ImageCard
                     imageSrc="images/aboutme/travel.png"
