@@ -115,7 +115,7 @@ export default function Experience() {
                 <h2 className="text-4xl font-bold text-center">Professional Experience</h2>
             </div>*/}
             {/* Contenido */}
-            <div className="p-1">
+            <div className="mt-10">
                 {/* Móvil: cards */}
                 <div className="md:hidden">
                     {experiences.map((exp, idx) => {
