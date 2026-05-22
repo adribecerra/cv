@@ -7,14 +7,14 @@ export default function About() {
             {/* Título centrado en pantalla completa */}
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
-                    <h2 className="text-4xl font-bold text-center">About me</h2>
+                    <h1 className="text-4xl font-bold text-center mb-4">About me</h1>
                     <p className="text-lg max-w-2xl mx-auto">
                         I am a Software Engineer who graduated from Aconcagua University in 2011. Outside of work, I enjoy outdoor activities, sports, trekking, and cycling. I also love good food, discovering different cultures, and, most of all, traveling.
                     </p>
                 </div>
             </div>
             <div className="text-center">
-                <h1 className="text-4xl font-bold mb-4">Hobbies and Interests</h1>
+                <h1 className="text-4xl font-bold mb-10">Hobbies and Interests</h1>
             </div>
             {/* Cards con foto abajo*/}
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -41,12 +41,12 @@ export default function About() {
                 <ImageCard
                     imageSrc="images/aboutme/food.png"
                     title="Food"
-                    description="I’m passionate about good food, I enjoy exploring different cuisines and cooking new recipes."
+                    description="I’m passionate about good food, I enjoy exploring different cuisines and pairing them with a good Mendoza wine."
                 />
                 <ImageCard
                     imageSrc="images/aboutme/asador.png"
-                    title="Food"
-                    description="I also enjoy cooking and making traditional Argentine asados."
+                    title="Great Argentine Asado Grill Master!"
+                    description="It is more than just cooking, it’s a tradition centered around enjoying time with friends and family, sharing conversations, stories, and good moments together."
                 />
             </div>
 

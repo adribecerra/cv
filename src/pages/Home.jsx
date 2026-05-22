@@ -22,7 +22,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="text-center">
-                <h1 className="text-4xl font-bold mb-4">My Background</h1>
+                <h1 className="text-4xl font-bold mb-10">My Background</h1>
             </div>
             {/* Cards con foto abajo*/}
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -57,8 +57,8 @@ export default function Home() {
                     route="/courses"
                 />
                 {/* My resume card */}
-                <div>
-                    <img src="images/resume/resume.png" alt="My resume" className="w-full"
+                <div className="group">
+                    <img src="images/resume/resume.png" alt="My resume" className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:brightness-90 w-full"
                         loading="lazy" />
                     <div className="p-2">
                         <h3 className="text-lg font-semibold">My resume</h3>
